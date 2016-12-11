@@ -213,6 +213,7 @@ html, body {
     color: white; }
   .smart-section .smart-img-center h2 {
       margin-bottom: 0;
+      font-family: 'Open Sans', sans-serif;
     }
   .smart-section .smart-center > p {
     font-family: 'Open Sans', sans-serif;
