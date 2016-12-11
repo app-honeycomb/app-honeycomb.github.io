@@ -408,6 +408,12 @@ html, body {
   padding: 0 7em;
 }
 
+@media (max-width: 768px) {
+  .nav {
+    padding: 0;
+  }
+}
+
 .header-apps-btn {
   float: right;
 }
