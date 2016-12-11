@@ -2,7 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-@font-face { font-family: Rissa; src: url('/fonts/RissaTypeface.ttf'); } 
+@font-face { font-family: Rissa; src: url('../fonts/RissaTypeface.ttf'); } 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -97,12 +97,12 @@ html, body {
     margin: auto; }
 
 .header {
-  background: url("/images/header.jpg");
+  background: url("../img/header.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   box-shadow: -300em -300em 300em 300em rgba(0, 0, 0, 0.85) inset; 
    padding-bottom:5em;}
-  .header .nav {
+/*  .header .nav {
     width: 100%; }
     .header .nav .nav-icon-div {
       display: flex;
@@ -113,7 +113,7 @@ html, body {
         margin-right: 2em; }
       .header .nav .nav-icon-div .nav-icon-hc-text {
         color: white; 
-         font-weight:600}
+         font-weight:600}*/
   .header .header-center {
     width: 100%;
     display: flex;
@@ -166,7 +166,9 @@ html, body {
    }
   @media only screen and (max-width: 765px) {
     .why-section {
-      padding: 0; } }
+      padding: 0;
+      background-image: none;
+      background: rgb(246,244,245) } }
   .why-section .why-content {
     padding: 5em 0;
     max-width: 95%; }
@@ -205,9 +207,13 @@ html, body {
         .smart-section .smart-img-center img {
           position: static;
           width: 100%; } }
-  .smart-section .smart-center > h2 {
+  .smart-section h2 {
     font-size: 2.5em;
-    margin-bottom: .7em; }
+    margin-bottom: .7em;
+    color: white; }
+  .smart-section .smart-img-center h2 {
+      margin-bottom: 0;
+    }
   .smart-section .smart-center > p {
     font-family: 'Open Sans', sans-serif;
     line-height: 1.8em;
@@ -271,7 +277,6 @@ html, body {
     .testimonials-section .testimonial .cleanDesktopImg {
       width: 51%;
       position: relative;
-      /*add position values - fixing "clean desktop" images. Also add @include md and comment @include sm and xs*/
       right: 1%;
       top: -10px; }
       @media only screen and (max-width: 1199px) {
@@ -303,7 +308,6 @@ html, body {
       .testimonials-section .testimonials .testimonial .cleanDesktopImg {
         width: 51%;
         position: relative;
-        /*add position values - fixing "clean desktop" images. Also add @include md and comment @include sm and xs*/
         right: 1%;
         top: -5px; }
         @media only screen and (max-width: 1199px) {
@@ -341,13 +345,13 @@ html, body {
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 7em 0; }
+    padding: 7em 0 2em 0; }
     @media only screen and (max-width: 765px) {
       .footer .footer-center {
         text-align: center; } }
   .footer .footer-nav {
     background-color: #3d3b38;
-    height: 5em; }
+    padding: 28px 0; }
   .footer .footer-center > h2, .footer .footer-center > p {
     font-family: 'Open Sans', sans-serif;
     line-height: 2em; }
@@ -357,3 +361,62 @@ html, body {
    font-weight: 600;text-align:center;font-size:30px;font-family:Raleway;margin-bottom:1em;}
 
 /*# sourceMappingURL=style.css.map */
+.footer-nav, .footer-nav a  {
+  color: white;
+  font-size: 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.footer-nav a {
+  padding: 0 1em;
+}
+
+@media (min-width: 768px) {
+.footer-nav > div > div {
+  display: inline-block;
+}
+.footer-links {
+  float: right;
+}
+}
+
+@media (max-width: 768px) {
+  .footer-nav > div {
+    text-align: center;
+  }
+
+  .footer-nav, .footer-nav a  {
+    line-height: 1.5em;
+    display: block;
+  }
+}
+
+.nav a {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+.nav a:hover {
+  text-decoration: none;
+}
+
+.nav {
+  margin-top: 2em;
+  letter-spacing: 1px;
+  line-height: 23px;
+  padding: 0 7em;
+}
+
+.header-apps-btn {
+  float: right;
+}
+
+.header {
+  padding-bottom: 2em;
+}
+
+.slick-slider > div > div > div > p {
+  cursor: pointer;
+}
+
